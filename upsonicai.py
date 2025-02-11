@@ -65,7 +65,7 @@ async def track_stocks(stocks: str = Query(..., title="Stock symbols (comma-sepa
         
         for stock in stock_symbols:
             investing_task = Task(
-                f"Search 'Investing.com {stock} technical analysis' on Google, open the first link, and extract Buy/Sell counts.",
+                f"Search 'Investing com {stock} technical analysis' on Google, open the first link, and extract Buy/Sell counts.",
                 tools=[BrowserUse],
                 response_format=StockSignal
             )
